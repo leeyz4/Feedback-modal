@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback modal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="feedbackButton">Give Feedback</button>
+ 
+  <div class="overlay" style="display: none;">
+      <div id="myModal" class="modal">
+     <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>How likely are you to recommend FrontendPro to someone you know?</h3>
+
+       <!-- Number row rating buttons -->
+        <div class="rating-container">
+          <button class="rating-btn">1</button>
+          <button class="rating-btn">2</button>
+          <button class="rating-btn">3</button>
+          <button class="rating-btn">4</button>
+          <button class="rating-btn">5</button>
+          <button class="rating-btn">6</button>
+          <button class="rating-btn">7</button>
+          <button class="rating-btn">8</button>
+          <button class="rating-btn">9</button>
+          <button class="rating-btn">10</button>
+        </div>
+
+        <!--Labels-->
+        <div class="label-row">
+        <span class="label-start">Not likely at all</span>
+        <span class="label-end">Extremely Likely</span>
+      </div>
+
+      <!--Buttons-->
+      <div class="buttons-row">
+        <button class="cancel-btn">Cancel</button>
+        <button class="submit-btn" disabled>Submit</button>
+      </div>
+    </div>
+    </div>
+   </div>
+      <script src="script.js"></script>
+</body>
+</html>

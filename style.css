@@ -1,0 +1,158 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+  }
+
+  #feedbackButton{
+    background: #101c2e;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 100px;
+    
+  }
+  
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(186, 235, 240, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /*This prevents the modal from touching the edges in small screens*/
+    box-sizing: border-box;
+  }
+  
+  .modal{
+    background: #214982;
+    color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 90%; /*makes the modal adaptable to those with small screens*/
+    max-width: 560px;
+    max-height: 90vh; /*Ensures the modal doesn't exceed 90% of the screen*/
+    overflow-y: auto; /*if the modal is too big then it makes it easier to just scroll through*/
+  }
+  
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f0f2f5;
+    border: none;
+    border-radius: 5px;
+    min-width: 40px;
+    background-color: #214982;
+  }
+
+  .close:hover{
+    background-color: #b03e3e;
+  }
+
+  h3{
+    margin-bottom: 40px;
+  }
+
+ .rating-container{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  flex-wrap: wrap; /*Allows wrapping on small screens*/
+ }
+
+  .rating-btn{
+  flex: 1 1 8%;
+  padding: 10px 0; /*makes the buttons have equal width*/
+  background-color: #2a2a5a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  min-width: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  
+.rating-btn:hover{
+  background-color: #6c5ce7;
+}
+
+.label-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size:  12px;
+  }
+
+.label-start, .label-end{
+  width: 100px;
+}
+
+.buttons-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+.cancel-btn, .submit-btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 10px;
+  }
+  
+.cancel-btn{
+    background-color: #555;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .cancel-btn:hover{
+    background-color: #2893c8;
+  }
+  
+.submit-btn{
+    background-color: #77758b;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover{
+    background-color: #2893c8;
+  }
+
+  /*Responsive tweaks*/
+  @media (max-width: 480px){
+      .rating-btn{
+      flex: 1 1 20%;
+    }
+
+    .label-row{
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+    }
+
+    .buttons-row{
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .cancel-btn, .submit-btn{
+      width: 100%;
+    }
+  }
+ 
